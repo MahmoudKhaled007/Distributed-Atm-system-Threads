@@ -1,0 +1,33 @@
+<pre><div class="text_to_html">//print Hello World in the parallel region 
+
+#include &lt;iostream&gt;
+#include &lt;omp.h&gt;
+using namespace std;
+
+void main()
+{
+	#pragma omp parallel
+	{
+		cout&lt;&lt;&quot;hello&quot;;
+	}
+	
+	system(&quot;pause&quot;);
+}
+......................................................................
+//print Hello World outside the parallel region 
+
+#include &lt;iostream&gt;
+#include &lt;omp.h&gt;
+using namespace std;
+
+void main()
+{
+        cout&lt;&lt;&quot;hello&quot;;
+	#pragma omp parallel
+	{
+	
+	}
+	
+	system(&quot;pause&quot;);
+}
+......................................................................</div></pre>
